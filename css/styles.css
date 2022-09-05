@@ -231,7 +231,8 @@ main > .footer > .scroll-text {
   align-items: center;
 }
 .skills-items p{
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 .skills-box .skills_circle {
   position: relative;
@@ -408,7 +409,7 @@ main > .footer > .scroll-text {
 .slide04 .content_poster .poster .img-box {
   width: 450px;
   height: 600px;
-  background-color: #efefef;
+  background-color: #f1f1f1;
 }
 .slide04 .content_poster .poster .poster_text_box {
   font-family: "GmarketSansMedium";

@@ -77,7 +77,7 @@ $(".skill-1").circleProgress({
   // 방향 반전 여부
   reverse: true,
   // 그래프 수치
-  value: 0.9,
+  value: 1.0,
   // 그래프 사이즈
   size: 110,
   // 그래프 모서리, 지울 시 각진 모양
@@ -87,7 +87,7 @@ $(".skill-1").circleProgress({
   animate: 3000,
   // 그래프 색상
   fill: {
-    gradient: ["red", "orange"]
+    gradient: ["#7AB8D7", "#F7B7B8"]
   }
 });
 // 스킬2_그래프 시작
@@ -100,7 +100,7 @@ $(".skill-2").circleProgress({
   thickness: 20,
   animate: 3000,
   fill: {
-    gradient: ["red", "orange"]
+    gradient: ["#7AB8D7", "#F7B7B8"]
   }
 });
 
@@ -114,7 +114,7 @@ $(".skill-3").circleProgress({
   thickness: 20,
   animate: 3000,
   fill: {
-    gradient: ["red", "orange"]
+    gradient: ["#7AB8D7", "#F7B7B8"]
   }
 });
 // 스킬4_그래프 시작
@@ -128,20 +128,33 @@ $(".skill-4").circleProgress({
   thickness: 20,
   animate: 3000,
   fill: {
-    gradient: ["red", "orange"]
+    gradient: ["#7AB8D7", "#F7B7B8"]
   }
 });
 // 스킬5_그래프 시작
 $(".skill-5").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.9,
+  value: 0.7,
   size: 110,
   lineCap: "round",
   thickness: 20,
   animate: 3000,
   fill: {
-    gradient: ["red", "orange"]
+    gradient: ["#7AB8D7", "#F7B7B8"]
+  }
+});
+// 스킬6_그래프 시작
+$(".skill-6").circleProgress({
+  startAngle: -Math.PI / 2,
+  reverse: true,
+  value: 0.8,
+  size: 110,
+  lineCap: "round",
+  thickness: 20,
+  animate: 3000,
+  fill: {
+    gradient: ["#7AB8D7", "#F7B7B8"]
   }
 });
 // 그래프 수치 출력
