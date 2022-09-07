@@ -47,6 +47,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+button {
+  background-color: none;
+  border: none;
+  outline: none;
+}
 .con-min-width {
   min-width: 1400px;
 }
@@ -114,7 +119,12 @@ a {
 }
 .top-bar .menu-box > ul > li.active > a {
   /*  임시색상  */
-  color: #777;
+  color: #FFD4BA;
+}
+
+.top-bar .menu-box > ul > li:hover> a{
+  text-decoration: underline;
+  text-underline-position: under ;
 }
 /* 헤더 끝 */
 
@@ -163,6 +173,11 @@ main .year{
   bottom: 230px;
   left: 610px;
 }
+
+main .spin-flower{
+  animation: spinFlower 5s linear infinite;
+}
+
 main > .footer {
   color: #fff;
   text-transform: uppercase;
@@ -184,6 +199,15 @@ main > .footer > .scroll-text {
   to {
     transform: translatex(-100%);
   }
+}
+@keyframes spinFlower {
+  0 {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
 }
 /* 메인표지 끝 */
 /* 소개 시작 */
@@ -256,14 +280,55 @@ main > .footer > .scroll-text {
 
 /* 추가 섹션 시작 */
 .section_add > .add_inner {
-  height: 400px;
+  height: 450px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.add_inner_img_box{
+  height: 100%;
   padding-top: var(--top-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add_inner_img_box > img{
+  margin: 0 20px;
+}
+.add_inner_img_box > img:not(:last-child){
+  width: 150px;
+  height: 150px;
+}
+.add_inner_img_box > img:last-child{
+  width: 230px;
+  height: 230px;
+}
+.add_inner_text{
+  font-size: var(--font-md);
+  color: var(--gray-color);
+  text-align: center;
+}
+#fullpage .ani{
+  opacity: 0;
+  visibility: hidden;
+
+}
+#fullpage .ani-1{
+  transform: translateY(70%);
 }
 
+#fullpage  .ani-2{
+  transform: translateY(50%);
+}
 
+#fullpage .section.active .ani{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) translateY(0);
+  transition: opacity 0.5s , visibility 0.5s , transform 2s;
+}
 /* 추가 섹션 끝 */
 
 /* 섹션3 슬라이드 시작 */
@@ -297,20 +362,10 @@ main > .footer > .scroll-text {
 }
 
 .section-3 .slide01 .content_body > div:first-child > .img-box{
-  width: 500px;
-  height: 500px;
-  background-image: url(../images/diptyque_mockup.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100%;
 }
 .section-3 .slide01 .content_body > div:last-child > .img-box{
-  width: 500px;
-  height: 500px;
-  background-image: url(../images/kakako_mockup.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100%;
 }
 
 .section-3 .slide01 .content_body .text-box {
@@ -392,29 +447,28 @@ main > .footer > .scroll-text {
 }
 /* 섹션3 슬라이드3 끝 */
 /* 섹션3 슬라이드4 시작 */
-.slide04 .content_poster{
-  padding-top: var(--top-height);
-}
 .slide04 .content_poster .poster {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: var(--top-height);
   padding: 0 30px;
 }
 .slide04 .content_poster .poster:not(:last-child) {
   border-right: 1px solid black;
 }
 .slide04 .content_poster .poster .img-box {
+  margin-top: var(--top-height);
   width: 450px;
-  height: 600px;
+  height: 550px;
   background-color: #f1f1f1;
 }
 .slide04 .content_poster .poster .poster_text_box {
   font-family: "GmarketSansMedium";
   color: var(--gray-color);
-  padding-top: 30px;
+  margin-top: 40px;
+  padding: 0 40px;
+
 }
 .slide04 .content_poster .poster .poster_text_box .poster_title {
   font-size: var(--font-md);
@@ -426,3 +480,79 @@ main > .footer > .scroll-text {
 }
 /* 섹션3 슬라이드4 끝 */
 /* 섹션3 슬라이드 끝 */
+/* 섹션4 컨텍트 시작 */
+.section-4 .content_body{
+  display: flex;
+  align-items: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+form label input,
+form label textarea {
+  border: 1px solid rgb(183, 183, 183);
+  border-radius: 0px;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+input {
+  height: 40px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(183, 183, 183);
+  font-size: 12px;
+}
+textarea {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: 350px;
+  resize: none;
+}
+
+button {
+  display: inlin-block;
+  width: 80px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-size: var(--font-xs);
+  color: var(--sec-color);
+}
+
+button:hover {
+  background-color: #7ab8d7;
+  box-shadow: 0px 10px 15px rgba(122, 184, 215, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.contact-footer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-footer >  i {
+  font-size: 30px;
+  color: ;
+}
+.contact-footer > h1{
+  margin-top: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+/* 섹션4 컨텍트 끝 */

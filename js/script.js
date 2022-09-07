@@ -1,9 +1,16 @@
 console.clear();
-
+function Fullpage__init(){
 new fullpage("#fullpage", {
   menu: ".top-bar .menu-box"
 });
 
+// const $current = $(".section.fp-section.active");
+//   $current.removeClass("active");
+//   setTimeout(function () {
+//     $current.addClass("active");
+//   });
+}
+Fullpage__init();
 // 네임 타이핑 시작
 new TypeIt(".name", {
   speed: 250,
