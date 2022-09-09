@@ -1,7 +1,51 @@
 console.clear();
-function Fullpage__init(){
-new fullpage("#fullpage", {
-  menu: ".top-bar .menu-box"
+// 만약 페이지를 다시 활성화했을 때 애니메이션이 다시 재생되길 원할 경우 true로 변경
+let chart1AllowRerender = true;
+
+// 건들지 마세요
+let chart1Rendered = false;
+
+$("#fullpage").fullpage({
+  menu: ".top-bar .menu-box",
+  // 스킬_써클그래프
+    afterLoad: function(ignored, destination){
+      // 애니메이션이 재생되길 원하는 data anchor의 위치 입력
+      if ( destination.anchor == 'section-2' ) {
+        if ( chart1AllowRerender ) {
+          // circle 차트 클래스명 확인 및 변경을 원하는 수치 입력
+          $(".skill-1").circleProgress({value: 1.0}),
+          $(".skill-2").circleProgress({value: 0.9}),
+          $(".skill-3").circleProgress({value: 0.9}),
+          $(".skill-4").circleProgress({value: 0.9}),
+          $(".skill-5").circleProgress({value: 0.7}),
+          $(".skill-6").circleProgress({value: 0.8});
+        }
+        else {
+          if ( chart1Rendered == false ) {
+            // circle 차트 클래스명 확인 및 변경을 원하는 수치 입력
+          $(".skill-1").circleProgress({value: 1.0}),
+          $(".skill-2").circleProgress({value: 0.9}),
+          $(".skill-3").circleProgress({value: 0.9}),
+          $(".skill-4").circleProgress({value: 0.9}),
+          $(".skill-5").circleProgress({value: 0.7}),
+          $(".skill-6").circleProgress({value: 0.8});
+            chart1Rendered = true;
+          }
+        }
+      }
+      else {
+        if ( chart1AllowRerender ) {
+          // circle 차트 클래스명 확인
+          $(".skill-1").circleProgress({value: 0}),
+          $(".skill-2").circleProgress({value: 0}),
+          $(".skill-3").circleProgress({value: 0}),
+          $(".skill-4").circleProgress({value: 0}),
+          $(".skill-5").circleProgress({value: 0}),
+          $(".skill-6").circleProgress({value: 0});
+        }
+      }
+    },
+
 });
 
 // const $current = $(".section.fp-section.active");
@@ -9,8 +53,6 @@ new fullpage("#fullpage", {
 //   setTimeout(function () {
 //     $current.addClass("active");
 //   });
-}
-Fullpage__init();
 // 네임 타이핑 시작
 new TypeIt(".name", {
   speed: 250,
@@ -84,7 +126,7 @@ $(".skill-1").circleProgress({
   // 방향 반전 여부
   reverse: true,
   // 그래프 수치
-  value: 1.0,
+  value: 0,
   // 그래프 사이즈
   size: 110,
   // 그래프 모서리, 지울 시 각진 모양
@@ -101,7 +143,7 @@ $(".skill-1").circleProgress({
 $(".skill-2").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.9,
+  value: 0,
   size: 110,
   lineCap: "round",
   thickness: 20,
@@ -115,7 +157,7 @@ $(".skill-2").circleProgress({
 $(".skill-3").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.9,
+  value: 0,
   size: 110,
   lineCap: "round",
   thickness: 20,
@@ -128,7 +170,7 @@ $(".skill-3").circleProgress({
 $(".skill-4").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.9,
+  value: 0,
   size: 110,
   // 그래프 모서리, 지울 시 각진 모양
   lineCap: "round",
@@ -142,7 +184,7 @@ $(".skill-4").circleProgress({
 $(".skill-5").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.7,
+  value: 0,
   size: 110,
   lineCap: "round",
   thickness: 20,
@@ -155,7 +197,7 @@ $(".skill-5").circleProgress({
 $(".skill-6").circleProgress({
   startAngle: -Math.PI / 2,
   reverse: true,
-  value: 0.8,
+  value: 0,
   size: 110,
   lineCap: "round",
   thickness: 20,

@@ -61,6 +61,7 @@ button {
   margin-right: auto;
 }
 .title {
+  user-select: none;
   font-family: "Abril Fatface", cursive;
 }
 .inner_title {
@@ -83,6 +84,7 @@ button {
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr;
+  user-select: none;
 }
 
 .content > .side-bar {
@@ -119,7 +121,7 @@ button {
 }
 .top-bar .menu-box > ul > li.active > a {
   /*  임시색상  */
-  color: #FFD4BA;
+  color: #678C86;
 }
 
 .top-bar .menu-box > ul > li:hover> a{
@@ -141,8 +143,16 @@ main {
 
 main > div:nth-child(1) {
   border-right: 1px solid black;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  background-color: #d0d0ce;
 }
-
+main > div:nth-child(1) > img{
+  object-fit: contain;
+  transform: rotateY(180deg);
+}
 main > div > .title {
   font-size: var(--font-title);
   line-height: 125px;
@@ -173,7 +183,15 @@ main .year{
   bottom: 230px;
   left: 610px;
 }
-
+main .add_text{
+  font-size: 12px;
+  position: absolute;
+  top: 280px;
+  left: 720px;
+  z-index: 99;
+  text-transform: uppercase;
+  color: var(--pri-color);
+}
 main .spin-flower{
   animation: spinFlower 5s linear infinite;
 }
@@ -222,11 +240,10 @@ main > .footer > .scroll-text {
   padding-top: var(--top-height);
 }
 .section-2 .content > .about_body > .profile .img-box {
-  height: 550px;
-  background-color: lightcoral;
+  height: 500px;
 }
 .section-2 .content > .about_body > .profile .inner_title {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 30px;
   position: relative;
   font-size: var(--font-sm);
@@ -309,6 +326,7 @@ main > .footer > .scroll-text {
   font-size: var(--font-md);
   color: var(--gray-color);
   text-align: center;
+  user-select: none;
 }
 #fullpage .ani{
   opacity: 0;
@@ -317,17 +335,19 @@ main > .footer > .scroll-text {
 }
 #fullpage .ani-1{
   transform: translateY(70%);
+  transition: opacity 0.5s , visibility 0.5s , transform 2s;
 }
 
 #fullpage  .ani-2{
   transform: translateY(50%);
+  transition: opacity 0.5s , visibility 0.5s , transform 2s;
 }
 
 #fullpage .section.active .ani{
   opacity: 1;
   visibility: visible;
   transform: translateX(0) translateY(0);
-  transition: opacity 0.5s , visibility 0.5s , transform 2s;
+  
 }
 /* 추가 섹션 끝 */
 
@@ -481,6 +501,10 @@ main > .footer > .scroll-text {
 /* 섹션3 슬라이드4 끝 */
 /* 섹션3 슬라이드 끝 */
 /* 섹션4 컨텍트 시작 */
+.section-4 .side-bar{
+  background-color: var(--sec-color);
+  color: #fff;
+}
 .section-4 .content_body{
   display: flex;
   align-items: center;
@@ -553,6 +577,7 @@ button:hover {
   margin-top: 50px;
   font-size: 30px;
   text-transform: uppercase;
+  user-select: none;
 }
 
 /* 섹션4 컨텍트 끝 */
