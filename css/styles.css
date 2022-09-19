@@ -119,6 +119,9 @@ button {
   border-bottom: 1px solid black;
   z-index: 99;
 }
+.top-bar .logo img{
+  height: 50px;
+}
 .top-bar .menu-box > ul > li.active > a {
   /*  임시색상  */
   color: #678C86;
@@ -192,6 +195,9 @@ main .add_text{
   text-transform: uppercase;
   color: var(--pri-color);
 }
+/* main div:nth-child(3) img:nth-child(2){
+  transform: rotate(40deg) scale(0.6);
+} */
 main .spin-flower{
   animation: spinFlower 5s linear infinite;
 }
@@ -230,6 +236,13 @@ main > .footer > .scroll-text {
 /* 메인표지 끝 */
 /* 소개 시작 */
 /* 소개_프로필 시작 */
+.section-2 .content .side-bar{
+  background-color:var(--pri-color);
+  color:#fff;
+}
+.section-2 .content .side-bar .ti-cursor{
+  color: #fff;
+}
 .section-2 .content > .about_body {
   padding-left: 70px;
   display: grid;
@@ -258,7 +271,14 @@ main > .footer > .scroll-text {
   height: 2px;
   background-color: currentcolor;
 }
-
+.section-2 .content > .about_body > .info_2 h1{
+  font-size: 50px;
+  color: var(--gray-color);
+}
+.section-2 .content > .about_body > .info_2 span{
+  font-size: 14px;
+  color: var(--gray-color);
+}
 /* 소개 _ 스킬 시작*/
 .skills-items{
   width: 70%;

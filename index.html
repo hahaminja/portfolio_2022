@@ -30,6 +30,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
   <!-- css/js -->
   <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/script.js" defer></script>
@@ -42,7 +47,11 @@
     <!-- 헤더 시작 -->
     <header class="top-bar con-min-width">
       <div class="con flex">
-        <a href="#" class="mr-auto">logo</a>
+        <div class="logo mr-auto flex items-center">
+          <a href="#">
+            <img src="./images/logo.png" alt="">
+          </a>
+        </div>
         <nav class="menu-box">
           <ul class="flex">
             <li data-menuanchor="section-1"><a href="#section-1" class="block mx-6">Home</a></li>
@@ -99,7 +108,7 @@
           </div>
           <div class="about_body">
             <article class="profile">
-              <div class="img-box bg-red-300">
+              <div class="img-box">
                 <img class="h-full object-fit" src="./images/2.png" alt="">
               </div>
               <div class="inner_title">
@@ -114,8 +123,11 @@
               </div>
             </article>
             <article class="inner_info info_2 flex flex-col justify-between">
-              <div class="bg-blue-400">
-                <h1>소개</h1>
+              <div class="mt-20">
+                <h1 class="">유연하게 반응하는 <br> 웹퍼블리셔 <br>
+                민지현 입니다.</h1>
+                <span class="block mt-10">하나의 결과물이 완성되기 까지 다양한 사람들의 협업이 이루어집니다. <br> 이러한 과정 속에서 항상 유연하게 대처하며 맞춰나갈 수 있게 도움이 되고 힘이 되는 <br> 유동적인 디자이너가 되고 싶습니다. <br><br>
+                  회사생활에서 기본이자 중요한 업무는 의사소통이라 생각합니다. <br> 원활한 소통을 위해 항상 경청하며 배우려는 자세로 노력하며 성실히 임하겠습니다.</span>
               </div>
               <div class="activity-box pb-10">
                 <div class="inner_title">
@@ -331,8 +343,8 @@
                       <span class="link_btn">web</span>
                     </a>
                 </div>
-                <div class="full-img-box flex-1 bg-red-300">
-                  <img src="#" alt="">
+                <div class="full-img-box flex-1 flex">
+                  <img src="./images/coke_mockup3.png" class="object-contain" alt="">
                 </div>
               </div>
             </div>
