@@ -259,7 +259,7 @@ main > .footer {
 }
 main > .footer > .scroll-text {
   font-family: 'Poppins', sans-serif;
-  animation: scrollText 5s linear infinite;
+  animation: scrollText 7s linear infinite;
 }
 
 @keyframes scrollText {
