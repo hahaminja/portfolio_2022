@@ -6,8 +6,6 @@
   font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-
 body {
   font-family: "GmarketSansMedium";
 }
@@ -161,8 +159,8 @@ main > div > .title {
   line-height: 125px;
 }
 main > div:nth-child(2) {
-  align-self: center;
-  margin-left: 100px;
+  display: flex;
+  position: relative;
 }
 
 main > div:nth-child(3) {
@@ -177,24 +175,72 @@ main > div:nth-child(4) {
   border-top: 1px solid black;
 }
 main .title{
-  position: relative;
+  align-self: center;
+  margin-left: 100px;
 }
 main .year{
   display: inline-block;
   font-size: var(--font-xs);
   position: absolute;
-  bottom: 230px;
-  left: 610px;
+  bottom: 170px;
+  left: 415px;
 }
 main .add_text{
   font-size: 12px;
   position: absolute;
-  top: 280px;
-  left: 720px;
+  top: 220px;
+  left: 520px;
   z-index: 99;
   text-transform: uppercase;
   color: var(--pri-color);
 }
+main .scroll-downs {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .mousey {
+  width: 2px;
+  height: 25px;
+  padding: 7px 10px;
+  border: 2px solid var(--gray-color);
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+main .scroll-downs > .mousey > .scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: var(--gray-color);
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0 {
+    opacity: 0;
+  }
+  10% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translatey(15px);
+    opacity: 0;
+  }
+}
+main .scroll-downs > span {
+  margin-top: 10px;
+  letter-spacing: 1.2px;
+  font-size: 10px;
+  color: var(--gray-color);
+}
+
 /* main div:nth-child(3) img:nth-child(2){
   transform: rotate(40deg) scale(0.6);
 } */
