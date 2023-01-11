@@ -1,440 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jihyun's portfolio</title>
+    <!-- jquery 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>jihyun's portfolio</title>
-  <!-- jquery 불러오기 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/b6d41ceb36.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--slick slider 필요 태그 st-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- 폰트어썸 -->
-  <script src="https://kit.fontawesome.com/b6d41ceb36.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- 타이핑 -->
-  <script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- 테일윈드 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <!-- 타이핑 -->
+    <script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
 
-  <!-- circle-progress 불러오기 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <!-- 테일윈드 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
 
-  <!-- 풀페이지 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css">
+    <!-- circle-progress 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
 
-<!-- 구글웹폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <!-- 풀페이지 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.css"
+    />
 
+    <!-- 구글웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- css/js -->
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/script.js" defer></script>
-</head>
+    <!-- css/js -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
 
-<body>
-
-
-  <div class="site-wrap">
-    <!-- 헤더 시작 -->
-    <header class="top-bar con-min-width">
-      <div class="con flex">
-        <div class="logo mr-auto flex items-center">
-          <a href="#">
-            <img src="./images/logo.png" alt="">
-          </a>
+  <body>
+    <div class="site-wrap">
+      <!-- 헤더 시작 -->
+      <header class="top-bar con-min-width">
+        <div class="con flex">
+          <div class="logo mr-auto flex items-center">
+            <a href="#">
+              <img src="./images/logo.png" alt="" />
+            </a>
+          </div>
+          <nav class="menu-box">
+            <ul class="flex">
+              <li data-menuanchor="section-1">
+                <a href="#section-1" class="block mx-6">Home</a>
+              </li>
+              <li data-menuanchor="section-2">
+                <a href="#section-2" class="block mx-6">About</a>
+              </li>
+              <li data-menuanchor="section-3">
+                <a href="#section-3" class="block mx-6">Experience</a>
+              </li>
+              <li data-menuanchor="section-4">
+                <a href="#section-4" class="block mx-6">Portfolio</a>
+              </li>
+              <li data-menuanchor="section-5">
+                <a href="#section-5" class="block mx-6">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="menu-box">
-          <ul class="flex">
-            <li data-menuanchor="section-1"><a href="#section-1" class="block mx-6">Home</a></li>
-            <li data-menuanchor="section-2"><a href="#section-2" class="block mx-6">About</a></li>
-            <li data-menuanchor="section-3"><a href="#section-3" class="block mx-6">Portfolio</a></li>
-            <li data-menuanchor="section-4"><a href="#section-4" class="block mx-6">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- 헤더 끝 -->
+      </header>
+      <!-- 헤더 끝 -->
 
-    <!--  풀페이지 시작  -->
-    <div id="fullpage">
-      <section class="section section-1" data-anchor="section-1">
-        <main>
-          <div>
-            <img src="./images/1.jpg" alt="">
-          </div>
-          <div>
-            <div class="add_text">
-              <p>minjihyun's</p>
-              <p>Web Publisher</p>
-            <p>Art works</p>
+      <!--  풀페이지 시작  -->
+      <div id="fullpage">
+        <section class="section section-1" data-anchor="section-1">
+          <main>
+            <div>
+              <img src="./images/1.jpg" alt="프로필1" />
             </div>
-            <span class="title">
-              Where <br>
-              aesthetics and <br>
-              functionality <br>
-              meet
-            </span>
-            <p class="year">2022 ver</p>
-            <div class="scroll-downs">
-              <div class="mousey">
-                <div class="scroller"></div>
+            <div>
+              <div class="add_text">
+                <p>minjihyun's</p>
+                <p>Web Publisher</p>
+                <p>Art works</p>
               </div>
-              <span>scroll down</span>
+              <span class="title">
+                Where <br />
+                aesthetics and <br />
+                functionality <br />
+                meet
+              </span>
+              <p class="year">2022 ver</p>
+              <div class="scroll-downs">
+                <div class="mousey">
+                  <div class="scroller"></div>
+                </div>
+                <span>scroll down</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="item flex flex-col w-full justify-center items-center mt-8">
-              <img src="./images/main_flower1.png" alt="메인페이지_꽃1">
-              <img class="mt-8" src="./images/main_flower2.png" alt="메인페이지_꽃2">
-              <img class="spin-flower mt-8" src="./images/main_flower3.png" alt="메인페이지_꽃3">
+            <div>
+              <div
+                class="item flex flex-col w-full justify-center items-center mt-8"
+              >
+                <img src="./images/main_flower1.png" alt="메인페이지_꽃1" />
+                <img
+                  class="mt-8"
+                  src="./images/main_flower2.png"
+                  alt="메인페이지_꽃2"
+                />
+                <img
+                  class="spin-flower mt-8"
+                  src="./images/main_flower3.png"
+                  alt="메인페이지_꽃3"
+                />
+              </div>
             </div>
-          </div>
-          <div class="footer">
-            <span class="scroll-text">Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span>
-            <span class="scroll-text">Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span>
-            <span class="scroll-text">Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span>
-            <span class="scroll-text">Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span>
-          </div>
-        </main>
-
-      </section>
-      <section class="section section-2" data-anchor="section-2">
-        <div class="content">
-          <div class="side-bar">
-            <h1 class="essential name title">Min ji hyun</h1>
-          </div>
-          <div class="about_body">
-            <article class="profile">
-              <div class="img-box">
-                <img class="h-full object-fit" src="./images/2.png" alt="">
-              </div>
-              <div class="inner_title">
-                <span>profile</span>
-              </div>
-              <div class="inner_info">
-                <p>민지현</p>
-                <p>1990-02-06</p>
-                <p>010-4611-6209</p>
-                <p>haha_mj@naver.com</p>
-                <p>INTJ(외향성과 공감능력을 곁들인)</p>
-              </div>
-            </article>
-            <article class="inner_info info_2 flex flex-col justify-between">
-              <div class="mt-20">
-                <h1 class="">유연하게 반응하는 <br> 웹퍼블리셔 <br>
-                민지현 입니다.</h1>
-                <span class="block mt-10">하나의 결과물이 완성되기 까지 다양한 사람들의 협업이 이루어집니다. <br> 이러한 과정 속에서 항상 유연하게 대처하며 맞춰나갈 수 있게 도움이 되고 힘이 되는 <br> 유동적인 디자이너가 되고 싶습니다. <br><br>
-                  회사생활에서 기본이자 중요한 업무는 의사소통이라 생각합니다. <br> 원활한 소통을 위해 항상 경청하며 배우려는 자세로 노력하며 성실히 임하겠습니다.</span>
-              </div>
-              <div class="activity-box pb-10">
+            <div class="footer">
+              <span class="scroll-text"
+                >Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span
+              >
+              <span class="scroll-text"
+                >Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span
+              >
+              <span class="scroll-text"
+                >Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span
+              >
+              <span class="scroll-text"
+                >Please enjoy my portfolio ☺︎ Nice to meet you ✦ &nbsp;</span
+              >
+            </div>
+          </main>
+        </section>
+        <section class="section section-2" data-anchor="section-2">
+          <div class="content">
+            <div class="side-bar">
+              <h1 class="essential name title">Min ji hyun</h1>
+            </div>
+            <div class="about_body">
+              <article class="profile">
+                <div class="img-box">
+                  <img
+                    class="h-full object-fit"
+                    src="./images/2.png"
+                    alt="프로필2"
+                  />
+                </div>
                 <div class="inner_title">
-                  <span>ACTIVITY & EXPERIENCE</span>
+                  <span>profile</span>
                 </div>
                 <div class="inner_info">
-                  <p>2013.08-2014.01 대우직업전문학교 인쇄출판디자인 실무과정 수료</p>
-                  <p>2014.02-2021.04 (주)꾸밈 디자인팀 / 주임 </p>
-                  <p>2021.08-2022.09 SBS아카데미컴퓨터학원 웹퍼블리셔 실무과정 수료</p>
+                  <p>민지현</p>
+                  <p>1990-02-06</p>
+                  <p>010-4611-6209</p>
+                  <p>haha_mj@naver.com</p>
+                  <p>INTJ(외향성과 공감능력을 곁들인)</p>
                 </div>
-              </div>
-            </article>
-            <article class="inner_info info_3 flex flex-col">
-              <div class="skills-box flex-1 pt-10">
-                <div class="inner_title">
-                  <span>skills</span>
+              </article>
+              <article class="inner_info info_2 flex flex-col justify-between">
+                <div class="mt-20">
+                  <h1 class="">
+                    유연하게 반응하는 <br />
+                    웹퍼블리셔 <br />
+                    민지현 입니다.
+                  </h1>
+                  <span class="block mt-10"
+                    >하나의 결과물이 완성되기 까지 다양한 사람들의 협업이
+                    이루어집니다. <br />
+                    이러한 과정 속에서 항상 유연하게 대처하며 맞춰나갈 수 있게
+                    도움이 되고 힘이 되는 <br />
+                    유동적인 디자이너가 되고 싶습니다. <br /><br />
+                    회사생활에서 기본이자 중요한 업무는 의사소통이라 생각합니다.
+                    <br />
+                    원활한 소통을 위해 항상 경청하며 배우려는 자세로 노력하며
+                    성실히 임하겠습니다.</span
+                  >
                 </div>
+                <div class="activity-box pb-10">
+                  <div class="inner_title">
+                    <span>ACTIVITY & EXPERIENCE</span>
+                  </div>
+                  <div class="inner_info">
+                    <p>
+                      2013.08-2014.01 대우직업전문학교 인쇄출판디자인 실무과정
+                      수료
+                    </p>
+                    <p>2014.02-2021.04 (주)꾸밈 디자인팀 / 주임</p>
+                    <p>
+                      2021.08-2022.09 SBS아카데미컴퓨터학원 웹퍼블리셔 실무과정
+                      수료
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="inner_info info_3 flex flex-col">
+                <div class="skills-box flex-1 pt-10">
+                  <div class="inner_title">
+                    <span>skills</span>
+                  </div>
                   <div class="skills-items flex mt-10 flex-wrap">
                     <div class="tool ps">
                       <div class="skills_circle skill-1">
-                        <div class="item">Ps</div>   
+                        <div class="item">Ps</div>
                       </div>
                       <p>포토샵</p>
                     </div>
-                  <div class="tool ai">
-                    <div class="skills_circle skill-2">
-                      <div class="item">Ai</div>
-                    </div>
-                    <p>일러스트레이터</p>
-                  </div>
-                  <div class="tool html">
-                    <div class="skills_circle skill-3">
-                      <div class="item">
-                        <i class="fa-brands fa-html5"></i>
+                    <div class="tool ai">
+                      <div class="skills_circle skill-2">
+                        <div class="item">Ai</div>
                       </div>
+                      <p>일러스트레이터</p>
                     </div>
-                    <p>HTML</p>
-                  </div>
-                  <div class="tool css">
-                    <div class="skills_circle skill-4">
-                      <div class="item">
-                        <i class="fa-brands fa-css3-alt"></i>
+                    <div class="tool html">
+                      <div class="skills_circle skill-3">
+                        <div class="item">
+                          <i class="fa-brands fa-html5"></i>
+                        </div>
                       </div>
+                      <p>HTML</p>
                     </div>
-                    <p>CSS3</p>
-                  </div>
-                  <div class="tool js">
-                    <div class="skills_circle skill-5">
-                      <div class="item">
-                        <i class="fa-brands fa-js"></i>
+                    <div class="tool css">
+                      <div class="skills_circle skill-4">
+                        <div class="item">
+                          <i class="fa-brands fa-css3-alt"></i>
+                        </div>
                       </div>
+                      <p>CSS3</p>
                     </div>
-                    <p>Js</p>
-                  </div>
-                  <div class="tool figma">
-                    <div class="skills_circle skill-6">
-                      <div class="item">
-                        <i class="fa-brands fa-figma"></i>
+                    <div class="tool js">
+                      <div class="skills_circle skill-5">
+                        <div class="item">
+                          <i class="fa-brands fa-js"></i>
+                        </div>
                       </div>
+                      <p>Js</p>
                     </div>
-                    <p>Figma</p>
+                    <div class="tool figma">
+                      <div class="skills_circle skill-6">
+                        <div class="item">
+                          <i class="fa-brands fa-figma"></i>
+                        </div>
+                      </div>
+                      <p>Figma</p>
+                    </div>
                   </div>
+                </div>
+                <div class="cerificate-box my-10">
+                  <div class="inner_title">
+                    <span>certificate</span>
                   </div>
-              </div>
-              <div class="cerificate-box my-10">
-                <div class="inner_title">
-                  <span>certificate</span>
+                  <div class="inner_info">
+                    <p>2013 전자출판기능사</p>
+                    <p>2022 웹디자인기능사</p>
+                  </div>
                 </div>
-                <div class="inner_info">
-                  <p>2013 전자출판기능사</p>
-                  <p>2022 웹디자인기능사</p>
+                <div class="hashtag-box pb-10">
+                  <div class="inner_title">
+                    <span>hashtag</span>
+                  </div>
+                  <div class="inner_info flex flex-wrap">
+                    <p class="block pr-4">#다정다감</p>
+                    <p class="block pr-4">#긍정적인</p>
+                    <p class="block pr-4">#책임감이 강한</p>
+                    <p class="block pr-4">#밝은 에너지</p>
+                    <p class="block pr-4">#스마일</p>
+                  </div>
                 </div>
-              </div>
-              <div class="hashtag-box pb-10">
-                <div class="inner_title">
-                  <span>hashtag</span>
-                </div>
-                <div class="inner_info flex flex-wrap">
-                  <p class="block pr-4">#다정다감</p>
-                  <p class="block pr-4">#긍정적인</p>
-                  <p class="block pr-4">#책임감이 강한</p>
-                  <p class="block pr-4">#밝은 에너지</p>
-                  <p class="block pr-4">#스마일</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section section_add fp-auto-height">
-        <div class="add_inner con-min-width">
-          <div class="con">
-            <div class="add_inner_img_box ani ani-1 flex-1">
-              <img src="./images/flower_item01.png" alt="">
-              <img src="./images/flower_item02.png" alt="">
-              <img src="./images/flower_item03.png" alt="">
-              <img src="./images/flower_item04.png" alt="">
-              <img src="./images/flower_item05.png" alt="">
-            </div>
-            <div class="add_inner_text ani ani-2 flex-1">
-              <h1>디자인과 코딩까지 할 수 있는 디자이너로 <br>
-              꾸준히 노력하고 배우고 있습니다.</h1>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section section-3 border-black border-b" data-anchor="section-3">
-        <div class="slide slide01">
-          <div class="content">
-            <div class="side-bar">
-              <h1 class="essential copy_site title">Website_copy</h1>
-            </div>
-            <div class="content_body">
-              <div class="items flex-1 border-r border-black">
-                <div class="img-box">
-                  <img src="./images/diptyque_mockup.png" alt="">
-                </div>
-                <div class="text-box">
-                  <h1 class="theme_title">Diptyque
-                    <h1 />
-                    <p class="theme_body">프랑스의 향수 브랜드. <br>
-                      대중적인 니치 향수 브랜드인 딥디크 사이트를 부분모작 하였습니다.</p>
-                    <a href="https://hahaminja.github.io/portfolio01/" target="blink">
-                      <span class="link_btn">process</span>
-                    </a>
-                </div>
+        </section>
+        <section class="section section_add fp-auto-height">
+          <div class="add_inner con-min-width">
+            <div class="con">
+              <div class="add_inner_img_box ani ani-1 flex-1">
+                <img src="./images/flower_item01.png" alt="" />
+                <img src="./images/flower_item02.png" alt="" />
+                <img src="./images/flower_item03.png" alt="" />
+                <img src="./images/flower_item04.png" alt="" />
+                <img src="./images/flower_item05.png" alt="" />
               </div>
-              <div class="items flex-1">
-                <div class="img-box">
-                  <img src="./images/kakako_mockup.png" alt="">
-                </div>
-                <div class="text-box">
-                  <h1 class="theme_title">Kakoo Bank
-                    <h1 />
-                    <p class="theme_body">카카오뱅크<br>
-                      기존 사이트를 부분모작 하였습니다.</p>
-                    <a href="https://hahaminja.github.io/kakaobank_copy/" target="blink">
-                      <span class="link_btn">process</span>
-                    </a>
-                </div>
+              <div class="add_inner_text ani ani-2 flex-1">
+                <h1>
+                  디자인과 코딩까지 할 수 있는 디자이너로 <br />
+                  꾸준히 노력하고 배우고 있습니다.
+                </h1>
               </div>
             </div>
           </div>
-        </div>
-        <div class="slide slide02">
-          <div class="content">
-            <div class="side-bar">
-              <h1 class="essential app_redesign title">App Redesign</h1>
-            </div>
-            <div class="content_body">
-              <div class="items">
-                <div class="text-box flex-1">
-                  <h1 class="theme_title">MOODA
-                    <h1 />
-                    <p class="theme_body">
-                      감성 다이어리 앱 MOODA(무다) UI / UX 디자인 입니다. <br>
-                      다이어리 앱을 설치 후 사용하지 않는 유저들이 많아짐에 따라 <br>
-                      인터뷰를 통해 불편한 점과 개선사항을 바탕으로 UI / UX 리디자인 하였습니다. <br>
-                      <br>
-                      오늘 하루의 감정을 기록하는 다이어리로 <br>
-                      다양한 감성 이모티콘의 색상들이 잘 보이기 위해 <br>
-                      메인 색상은 무채색인 블랙 그레이로 선택을 하였으며 <br>
-                      배경이나 글씨체는 유저들이 자유롭게 정할 수 있습니다. <br>
-                      <br>
-                      기존 앱에서는 다이어리만 사용할 수 있었지만 <br>
-                      영화나 도서를 추가 함에 따라 <br>
-                      더 많은 카테고리를 기록할 수 있습니다.
-                    </p>
-                    <div class="color-box flex my-2 justify-center">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <a href="https://hahaminja.github.io/mooda_app/" target="blink" class="block my-4">
-                      <span class="link_btn">App</span>
-                    </a>
-                </div>
-                <div class="full-img-box flex-1">
-                  <img src="./images/mooda_img.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide slide03">
-          <div class="content">
-            <div class="side-bar">
-              <h1 class="essential web_redesign title">Web Redesign</h1>
-            </div>
-            <div class="content_body">
-              <div class="items">
-                <div class="text-box flex-1">
-                  <h1 class="theme_title">Coca-cola
-                    <h1 />
-                    <p class="theme_body">
-                      전 세계에서 가장 많이 판매되는 음료인 코카콜라 컴퍼니의 사이트를 리디자인 하였습니다. <br>
-                      기존 한국 코카콜라의 사이트는 홍보/광고의 목적으로는 올드한 감성이나 많은 양의 텍스트들이 <br>
-                      사이트를 방문하는 주 타겟층과는 거리가 멀었습니다. <br>
-                      <br>
-                      톡톡 튀는 코카콜라의 감성을 담아 메인 컬러를 설정하였으며 <br>
-                      간단한 레이아웃과 신제품, 이벤트 홍보를 위한 슬라이드를 추가하였습니다. <br>
-                      자유로워 보이는 영문폰트로 타이틀을 강조하였고 <br>
-                      기존 중복되는 문구들은 삭제를 하여 가독성을 높였습니다.
-                    </p>
-                    <div class="color-box flex my-2 justify-center">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <a href="https://hahaminja.github.io/coke_redesign/" target="blink" class="block my-4">
-                      <span class="link_btn">web</span>
-                    </a>
-                </div>
-                <div class="full-img-box flex-1 flex">
-                  <img src="./images/coke_mockup3.png" class="object-contain" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide slide04">
-          <div class="content">
-            <div class="side-bar">
-              <h1 class="essential works title">Art works</h1>
-            </div>
-            <div class="content_poster flex">
-              <div class="poster flex-1">
-                <div class="img-box">
-                  <img src="./images/poster_01.png" alt="">
-                </div>
-                <div class="poster_text_box">
-                  <h1 class="poster_title">무한한 가능성</h1>
-                  <span class="poster_body">
-                    새로운 공부를 시작함으로써 다양한 진로 선택을 할 수 있을거란 미래에 대한 꿈을 주제로 디자인 하였음. <br>
-                    무한한 미래, 끝없이 발전하는 컴퓨터, 그리고 계속 공부하고 도전하는 사람들 속에서 열심히 전진할 모습을 표현 하였으며 <br> 완전한 블랙은 부정적인 느낌을 줄 수 있기에
-                    적당히 어두운 색과 <br> 몽환적인 느낌의 컬러들을 정하였고 합성하는 과정에서 <br> 원하는 톤들이 나오진 않았지만  <br> 자유롭게 표현함에 즐거운 경험이 되었음.
-                  </span>
-                </div>
-              </div>
-              <div class="poster flex-1">
-                <div class="img-box bg-gray-300">
-                  <img src="./images/poster_02.png" alt="">
-                </div>
-                <div class="poster_text_box">
-                  <h1 class="poster_title">홀리데이</h1>
-                  <span class="poster_body">
-                    코로나19로 인해 마스크없이 자유로웠던 시대는 <br>  돌아올 수 없는 과거가 되었으며 한쪽에서는 전쟁으로 인해 죄없는 많은 사람들이 목숨을 잃고있음에 평화와 희망을 담고자 디자인 하였음
-                    <br> 걱정없이 휴가를 보내길 바라는 마음으로 수영장에서 노는 사람들과 희망을 상징하는 동물인 고래는 우크라이나에서 고래처럼 큰 대형 수송기가
-                    있었지만 전쟁시 폭격으로 인해 파괴되었다는 얘기를 듣고 모티브로 잡아 작업함.
-                  </span>
-                </div>
-              </div>
-              <div class="poster flex-1">
-                <div class="img-box">
-                  <img src="./images/poster_03.png" alt="">
-                </div>
-                <div class="poster_text_box">
-                  <h1 class="poster_title">황금비율_인포그래픽</h1>
-                  <span class="poster_body">
-                    코로나19로 인한 사회적 거리두기가 강화될 수록 <br> 집에서 혼술하는 사람들이 늘어남을 알게 되었음 <br>
-                    혼술족들을 위한 달달한 레시피들을 소개하고자 인포그래픽으로 <br> 혼술 황금비율 레시피 디자인을 하였으며 <br>
-                    퇴근 후를 맞춰 배경은 밤하늘로 정함 어둡지않은 네이비색상에 맞춰 <br> 꿀을 연상시키는 옐로우로 따뜻함과 맛을 표현함.
-                  </span>
-                </div>
-              </div>
+        </section>
 
+        <section class="section section-3" data-anchor="section-3">
+          <div class="content_left">
+            <img src="./images/layout.png" alt="상세페이지" />
+            <img src="./images/layout.png" alt="상세페이지" />
+          </div>
+          <div class="content_right">
+            <div class="right_txt_box">
+              <div class="txt_title">
+                <span>Work experience</span>
+              </div>
+              <div class="txt_body">
+                <p>
+                  액자, 실내 그래픽스티커, 글라스 시트지, 현관문 시트지 등 제품
+                  디자인 작업 후 상세페이지를 만들어 상품 등록하는 작업을
+                  하였습니다.<br />
+                </p>
+              </div>
+            </div>
+            <div class="right_works_slider">
+              <div class="inner_arrows">
+                <i class="left_arrow fa-solid fa-angle-left"></i>
+                <i class="right_arrow fa-solid fa-angle-right"></i>
+              </div>
+              <div class="slide_wrap">
+                <div class="work_img">
+                  <img src="./images/170img01.png" alt="작업물1" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img02.png" alt="작업물2" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img03.png" alt="작업물3" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img04.png" alt="작업물4" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img05.png" alt="작업물5" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img06.png" alt="작업물6" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img07.png" alt="작업물7" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img08.png" alt="작업물8" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img09.png" alt="작업물9" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img10.png" alt="작업물10" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img11.png" alt="작업물11" />
+                </div>
+                <div class="work_img">
+                  <img src="./images/170img12.png" alt="작업물12" />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section section-4" data-anchor="section-4">
-        <div class="content">
-          <div class="side-bar">
-            <h1 class="essential contact title">let's stay in touch</h1>
-          </div>
-          <div class="content_body">
-            <div class="flex-1 contact-form">
-              <form onsubmit="sendEmailForm(this); return false;" action="https://formspree.io/f/xdojkyga" method="POST">
-                <label>
-                  <input type="email" name="email" placeholder="Please put your e-mail address here">
-                </label>
-                <label>
-                  <textarea name="message" placeholder="text"></textarea>
-                </label>
-                <button type="submit">
-                  <span btn_txt>Send</span>
-                </button>
-              </form>
+        </section>
+
+        <section
+          class="section section-4 border-black border-b"
+          data-anchor="section-4"
+        >
+          <div class="content">
+            <div class="side-bar">
+              <h1 class="essential copy_site title">Portfolio</h1>
             </div>
-            <div class="contact-footer flex-1">
-              <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 3.0; color:rgb(240, 74, 74);"></i>
-              <h1>👀 Thank you for watching</h1>
+            <div class="content_body">
+              <div class="works_wrap">
+                <ul class="work_btn_wrap">
+                  <li class="work_btn_list">
+                    <a href="#">coca-cola</a>
+                  </li>
+                  <li class="work_btn_list">
+                    <a href="#">mooda_app</a>
+                  </li>
+                  <li class="work_btn_list">
+                    <a href="#">sulwhasoo</a>
+                  </li>
+                  <li class="work_btn_list">
+                    <a href="#">kakao bank</a>
+                  </li>
+                  <li class="work_btn_list">
+                    <a href="#">poster design</a>
+                  </li>
+                </ul>
+                <ul class="work_box">
+                  <li class="work_slide">
+                    <div class="work_txt_wrap">
+                      <h1 class="work_title">coca-cola</h1>
+                      <div class="work_body">
+                        <p>
+                          전 세계에서 가장 많이 판매되는 음료인 코카콜라
+                          컴퍼니의 사이트를 리디자인 하였습니다. <br />
+                          기존 한국 코카콜라의 사이트는 홍보/광고의 목적으로는
+                          올드한 감성이나 많은 텍스트들이 주 타겟층과는 거리가
+                          멀었습니다. <br />
+                          톡톡 튀는 코카콜라의 감성을 담아 메인 컬러를
+                          설정하였으며 간단한 레이아웃과 신제품, 이벤트 홍보를
+                          위한 슬라이드를 추가하였습니다. <br />
+                          자유로워 보이는 영문폰트로 타이틀을 강조하였고 기존
+                          중복되는 문구들은 삭제를 하여 가독성을 높였습니다.<br />
+                          <br />
+                          <span> Web redesign / 1인 작업</span>
+                        </p>
+                        <div class="color_wrap">
+                          <div class="color"></div>
+                          <div class="color"></div>
+                          <div class="color"></div>
+                          <div class="color"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <a
+                          href="https://hahaminja.github.io/coke_redesign/"
+                          target="_blank"
+                          class="work_view_btn"
+                        >
+                          WEB
+                        </a>
+                      </div>
+                    </div>
+                    <div class="work_img_box">
+                      <img src="./images/coke_mockup3.png" alt="작업이미지1" />
+                    </div>
+                  </li>
+                  <li class="work_slide">
+                    <div class="work_txt_wrap">
+                      <h1 class="work_title">mooda</h1>
+                      <div class="work_body">
+                        <p>
+                          감성 다이어리 앱 MOODA(무다) UI / UX 디자인 입니다.
+                          <br />
+                          다이어리 앱을 설치 후 사용하지 않는 유저들이 많아짐에
+                          따라 인터뷰를 통해 불편한 점과 개선사항을 바탕으로
+                          <br />
+                          UI / UX 리디자인 하였습니다. <br />
+                          오늘 하루의 감정을 기록하는 다이어리로 다양한 감성
+                          이모티콘의 색상들이 잘 보이기 위해 <br />
+                          메인 색상은 무채색인 블랙 그레이로 선택을 하였으며
+                          배경이나 글씨체는 유저들이 자유롭게 정할 수 있습니다.
+                          <br />
+                          기존 앱에서는 다이어리만 사용할 수 있었지만 <br />
+                          영화나 도서를 추가 함에 따라 <br />
+                          더 많은 카테고리를 기록할 수 있습니다.<br />
+                          <br />
+                          <span> App redesign / 1인 작업</span>
+                        </p>
+                        <div class="color_wrap">
+                          <div class="color"></div>
+                          <div class="color"></div>
+                          <div class="color"></div>
+                          <div class="color"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <a
+                          href="https://hahaminja.github.io/mooda_app/"
+                          target="_blank"
+                          class="work_view_btn"
+                        >
+                          APP
+                        </a>
+                      </div>
+                    </div>
+                    <div class="work_img_box">
+                      <img src="./images/mooda_mockup.png" alt="작업이미지2" />
+                    </div>
+                  </li>
+                  <li class="work_slide">
+                    <div class="work_txt_wrap">
+                      <h1 class="work_title">sulwhasoo</h1>
+                      <div class="work_body">
+                        <p>
+                          설화수 <br />
+                          기존 사이트를 부분 모작 하였습니다. <br />
+                          <br />
+                          <span> Responsive Web / 1인 작업</span>
+                        </p>
+                        <div class="color_wrap">
+                          <div class="color"></div>
+                          <div class="color"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <a
+                          href="https://hahaminja.github.io/sulwhasoo_copy/"
+                          target="_blank"
+                          class="work_view_btn"
+                        >
+                          WEB
+                        </a>
+                      </div>
+                    </div>
+                    <div class="work_img_box">
+                      <img src="./images/sulwhasoo.png" alt="작업이미지3" />
+                    </div>
+                  </li>
+                  <li class="work_slide">
+                    <div class="work_txt_wrap">
+                      <h1 class="work_title">kakao bank</h1>
+                      <div class="work_body">
+                        <p>
+                          카카오뱅크 <br />
+                          기존 사이트를 부분 모작 하였습니다.<br />
+                          <br />
+                          <span> Clone coding / 1인 작업</span>
+                        </p>
+                        <div class="color_wrap">
+                          <div class="color"></div>
+                          <div class="color"></div>
+                          <div class="color"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <a
+                          href="https://hahaminja.github.io/kakaobank_copy/"
+                          target="_blank"
+                          class="work_view_btn"
+                        >
+                          WEB
+                        </a>
+                      </div>
+                    </div>
+                    <div class="work_img_box">
+                      <img src="./images/kakako_mockup.png" alt="작업이미지4" />
+                    </div>
+                  </li>
+                  <li class="work_slide">
+                    <div class="inner_img_wrap">
+                      <div class="inner_img_box">
+                        <img src="./images/poster01.png" alt="poster1" />
+                        <div class="inner_txt_box">
+                          <p class="txt_box_title">무한한 가능성</p>
+                          <p class="txt_box_body">
+                            새로운 공부를 시작함으로써 미래에 대한 <br />
+                            꿈을 주제로 작업함 <br />
+                            무한한 미래, 끝없이 발전하는 IT, 공부하고 <br />
+                            도전함으로써 열심히 전진하는 <br />
+                            모습을 도로 위의 차로 표현하였으며 <br />
+                            완전한 블랙은 부정적인 느낌을 줄 수 있기에 적당한
+                            톤과 몽환적인 분위기를 주는 컬러로 선택하였습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="inner_img_box">
+                        <img src="./images/poster02.png" alt="poster2" />
+                        <div class="inner_txt_box">
+                          <p class="txt_box_title">홀리데이</p>
+                          <p class="txt_box_body">
+                            코로나19와 우크라이나 전쟁을 주제로 <br />
+                            지구의 평화와 희망을 담고자 작업함 <br />
+                            걱정없이 휴가를 보내길 바라는 마음으로 <br />
+                            수영장에서 노는 사람들과 <br />
+                            희망을 상징하는 동물인 고래는 우크라이나에서
+                            고래처럼 큰 대형 수송기가 있었지만 <br />
+                            전쟁시 폭격으로 인해 파괴되었다는 얘기를 듣고 <br />
+                            모티브로 잡아 디자인 하였습니다. <br />
+                            천둥번개는 전쟁을, 무지개는 희망을 상징합니다.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="inner_img_box">
+                        <img src="./images/poster03.png" alt="poster3" />
+                        <div class="inner_txt_box">
+                          <p class="txt_box_title">황금비율_인포그래픽</p>
+                          <p class="txt_box_body">
+                            코로나19로 인한 사회적 거리두기가 강화될수록 <br />
+                            모임은 줄고 집에서 혼술하는 사람들이 증가함<br />
+                            혼자가 익숙하지 않아 우울해진 사람들을 위해 <br />
+                            그들을 위한 달달한 레시피를 소개하고자 <br />
+                            디자인 하였으며 배경은 퇴근 후를 설정, <br />
+                            밤하늘로 정하였으며
+                            <br />
+                            꿀을 연상시키는 옐로우로 따뜻한 위로를
+                            표현하였습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section class="section section-5" data-anchor="section-5">
+          <div class="content">
+            <div class="side-bar">
+              <h1 class="essential contact title">let's stay in touch</h1>
+            </div>
+            <div class="content_body">
+              <div class="flex-1 contact-form">
+                <form
+                  onsubmit="sendEmailForm(this); return false;"
+                  action="https://formspree.io/f/xdojkyga"
+                  method="POST"
+                >
+                  <label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Please put your e-mail address here"
+                    />
+                  </label>
+                  <label>
+                    <textarea name="message" placeholder="text"></textarea>
+                  </label>
+                  <button type="submit">
+                    <span btn_txt>Send</span>
+                  </button>
+                </form>
+              </div>
+              <div class="contact-footer flex-1">
+                <i
+                  class="fa-solid fa-heart fa-beat"
+                  style="--fa-beat-scale: 3; color: rgb(240, 74, 74)"
+                ></i>
+                <h1>👀 Thank you for watching</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--  풀페이지 끝  -->
     </div>
-    <!--  풀페이지 끝  -->
-  </div>
-</body>
-
+  </body>
 </html>

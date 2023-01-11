@@ -75,48 +75,10 @@ new TypeIt(".copy_site", {
   .pause(500)
   .delete(12)
   .pause(500)
-  .type("Diptyque&KaKao", { delay: 500 })
+  .type("Art works", { delay: 500 })
   .go();
 // 웹사이트 타이핑 끝
 
-// 앱리디자인 타이핑 시작
-new TypeIt(".app_redesign", {
-  speed: 250,
-  startDelay: 900,
-  loop: true
-})
-  .pause(500)
-  .delete(12)
-  .pause(500)
-  .type("Mooda", { delay: 500 })
-  .go();
-// 앱리디자인 타이핑 끝
-
-// 웹리디자인 타이핑 시작
-new TypeIt(".web_redesign", {
-  speed: 250,
-  startDelay: 900,
-  loop: true
-})
-  .pause(500)
-  .delete(12)
-  .pause(500)
-  .type("Coca-cola", { delay: 500 })
-  .go();
-// 웹리디자인 타이핑 끝
-
-// 아트웍 타이핑 시작
-new TypeIt(".works", {
-  speed: 250,
-  startDelay: 900,
-  loop: true
-})
-  .pause(500)
-  .delete(12)
-  .pause(500)
-  .type("Poster Design", { delay: 500 })
-  .go();
-// 아트웍 타이핑 끝
 
 // 스킬1_그래프 시작
 $(".skill-1").circleProgress({
@@ -214,3 +176,35 @@ $(".skill-6").circleProgress({
 // });
 
 // 스킬_그래프 끝
+
+//섹션 3 슬릭
+  $('.slide_wrap').slick({
+    slidesToShow: 6,
+    arrows : true,
+    nextArrow:$('.right_arrow'),
+    prevArrow:$('.left_arrow'),
+  });
+
+// 섹션 4 슬라이드
+$(function () {
+  const work_slide = $(".work_slide");
+  const work_btn_list = $(".work_btn_list");
+  const on_slide = $(".work_box > li.On");
+
+  first();
+
+  function first() {
+    work_slide.eq(0).addClass("On");
+    work_btn_list.eq(0).addClass("Act");
+  }
+
+  work_btn_list.click(function () {
+    const idx = $(this).index();
+
+    $(this).addClass("Act");
+    $(this).siblings().removeClass("Act");
+    work_slide.removeClass("On");
+    work_slide.eq(idx).addClass("On");
+  });
+});
+
