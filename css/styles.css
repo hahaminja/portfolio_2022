@@ -87,7 +87,7 @@ button {
 
 .content > .side-bar {
   grid-column: 1 / 2;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
   display: flex;
   align-items: center;
   padding-top: var(--top-height);
@@ -140,23 +140,23 @@ main {
   grid-template-columns: 200px 1fr 20%;
   grid-template-rows: 1fr 60px;
   user-select: none;
+  position: relative;
 }
 
 main > div:nth-child(1) {
-  border-right: 1px solid black;
   display: flex;
   width: 100%;
   height: 100%;
   align-items: flex-end;
-  background-color: #d0d0ce;
+
 }
 main > div:nth-child(1) > img{
-  object-fit: contain;
-  transform: rotateY(180deg);
+  object-fit: cover;
 }
 main > div > .title {
   font-size: var(--font-title);
   line-height: 125px;
+  flex-shrink: 0;
 }
 main > div:nth-child(2) {
   display: flex;
@@ -298,8 +298,16 @@ main > .footer > .scroll-text {
   user-select: none;
   padding-top: var(--top-height);
 }
+.section-2 .content > .about_body > .profile{
+  display: flex;
+  flex-direction: column-reverse;
+}
 .section-2 .content > .about_body > .profile .img-box {
   height: 500px;
+  transform: rotateY(180deg);
+}
+.profile__inner{
+
 }
 .section-2 .content > .about_body > .profile .inner_title {
   margin-top: 40px;
@@ -364,8 +372,8 @@ main > .footer > .scroll-text {
 /* 추가 섹션 시작 */
 .section_add > .add_inner {
   height: 450px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  /* border-top: 1px solid black; */
+  /* border-bottom: 1px solid black; */
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
