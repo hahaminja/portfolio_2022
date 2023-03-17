@@ -13,12 +13,12 @@ $("#fullpage").fullpage({
       if ( destination.anchor == 'section-2' ) {
         if ( chart1AllowRerender ) {
           // circle 차트 클래스명 확인 및 변경을 원하는 수치 입력
-          $(".skill-1").circleProgress({value: 1.0}),
-          $(".skill-2").circleProgress({value: 0.9}),
-          $(".skill-3").circleProgress({value: 0.9}),
-          $(".skill-4").circleProgress({value: 0.9}),
-          $(".skill-5").circleProgress({value: 0.7}),
-          $(".skill-6").circleProgress({value: 0.8});
+          $(".skill-1").circleProgress({value: 0.8}),
+          $(".skill-2").circleProgress({value: 0.8}),
+          $(".skill-3").circleProgress({value: 0.7}),
+          $(".skill-4").circleProgress({value: 0.7}),
+          $(".skill-5").circleProgress({value: 0.6}),
+          $(".skill-6").circleProgress({value: 0.6});
         }
         else {
           if ( chart1Rendered == false ) {
